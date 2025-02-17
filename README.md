@@ -1,7 +1,7 @@
 # Kaggle Playground Series - Steel Plate Defect Prediction
 
 ## Project Overview
-This project is the final Continuous Assessment for the course "Programming with Big Data (PROG9813)" as part of the Data Science program (TU059) at TU Dublin. I participated in a **Kaggle Playground Series competition**, where the task was to predict **steel-plate defects** using machine learning models.
+This project is the final Continuous Assessment for the course "Programming with Big Data (PROG9813)" as part of the Data Science program (TU059) at TU Dublin. I participated in a Kaggle Playground Series competition, where the task was to predict steel-plate defects using machine learning models.
 
 ### Task Description
 - Developed a classifier to identify various **defect categories** in steel plates.
@@ -17,8 +17,17 @@ This project is the final Continuous Assessment for the course "Programming with
 - **PySpark**: Distributed computing framework for large-scale data processing.
 - **Python**: Core programming language.
 - **Jupyter Notebook**: Development environment.
-- **MLlib** (Spark's Machine Learning Library): Model training and evaluation.
+- **MLlib (Spark's Machine Learning Library)**: Model training and evaluation.
 - **Pandas & NumPy**: Data preprocessing and manipulation.
+- **Matplotlib & Seaborn**: Data visualization.
+
+### Project Structure
+This repository contains **five Jupyter Notebook files**, each covering a different stage of the workflow:
+1. **Cleaning Data** - Preprocessing and handling missing values.
+2. **Quality Checking Data** - Validating data consistency and integrity.
+3. **Model Creation** - Implementing machine learning models using PySpark MLlib.
+4. **Model Tuning** - Hyperparameter optimization and performance evaluation.
+5. **Final Predictions** - Generating predictions and submitting results.
 
 ### Installation & Usage
 1. Clone the repository:
@@ -29,16 +38,20 @@ This project is the final Continuous Assessment for the course "Programming with
    ```bash
    cd steel-defect-prediction
    ```
-3. Open the Jupyter Notebook:
+3. Start a PySpark session:
+   ```python
+   from pyspark.sql import SparkSession
+   spark = SparkSession.builder.appName("SteelDefectPrediction").getOrCreate()
+   ```
+4. Open the Jupyter Notebook:
    ```bash
    jupyter notebook
    ```
-4. Run the notebook to explore data processing, model training, and evaluation.
+5. Run the notebooks sequentially to explore data processing, model training, and evaluation.
 
 ### Future Improvements
 - Experiment with **ensemble learning** to improve predictive accuracy.
 - Utilize **deep learning approaches** such as CNNs for defect detection.
-- Perform **feature engineering** to enhance model interpretability.
 
 ---
 Feel free to contribute or suggest improvements by opening an issue or pull request. 🚀
